@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/menu_commands_play"
+          android:icon="@drawable/av_play"
+          android:title="@string/menu_play"
+          android:showAsAction="always" />
+    
+    <item android:id="@+id/menu_commands_insert"
+	      android:icon="@drawable/content_new"
+	      android:title="@string/menu_insert"
+	      android:showAsAction="always" />
+    
+    <item android:id="@+id/menu_commands_rename"
+	      android:icon="@drawable/content_edit"
+	      android:title="@string/menu_rename"
+	      android:showAsAction="ifRoom" />
+    
+    <item android:id="@+id/menu_commands_delete_script"
+	      android:icon="@drawable/content_discard"
+	      android:title="@string/menu_delete"
+	      android:showAsAction="ifRoom" />
+    
+    <item android:id="@+id/menu_commands_export"
+	      android:title="@string/menu_export"
+	      android:showAsAction="never" />
+    
+    <item android:id="@+id/menu_quick_settings"
+          android:title="@string/menu_quick_settings"
+          android:showAsAction="never">
+          
+        <menu>
+            <group android:checkableBehavior="all">
+			    <item android:id="@+id/menu_commands_auto_insert_below"
+				      android:title="@string/menu_auto_insert_below"
+				      android:showAsAction="never"  />
+			    <item android:id="@+id/menu_commands_auto_insert_brkt"
+				      android:title="@string/menu_auto_insert_brkt"
+				      android:showAsAction="never"  />
+			    <item android:id="@+id/menu_animate"
+				      android:title="@string/menu_animate"
+				      android:showAsAction="never"  />
+		    </group>
+    	</menu>
+    </item>
+    
+    <item android:id="@+id/menu_help"
+	      android:icon="@drawable/action_help"
+	      android:title="@string/menu_help"
+	      android:showAsAction="never" />
+    
+
+</menu>

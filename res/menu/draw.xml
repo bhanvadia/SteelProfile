@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/menu_replay"
+        android:icon="@drawable/av_replay"
+        android:title="@string/menu_replay"
+	    android:showAsAction="always"></item>
+    
+    <item android:id="@+id/menu_share"
+        android:icon="@drawable/social_share"     
+        android:title="Share ScreenShot"
+        android:showAsAction="never"></item>
+    
+    <item android:id="@+id/result"
+        android:icon="@drawable/av_play"
+        android:title="@string/menu_play"
+        android:showAsAction="always"></item>
+    
+    <item android:id="@+id/menu_animate"
+        android:title="@string/menu_animate"
+        android:showAsAction="never"
+        android:checkable="true"  />
+	
+</menu>

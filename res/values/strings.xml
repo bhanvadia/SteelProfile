@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Steel Profile</string>
+    <string name="versionName">0.0.1</string>
+    <string name="website">http://www.uni-due.com</string>
+    
+    <string name="menu_new">New</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_about">About</string>
+    <string name="menu_run">Run</string>
+    <string name="menu_edit">Edit</string>
+    <string name="menu_rename">Rename</string>
+    <string name="menu_copy">Copy</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_insert">Insert</string>
+    <string name="menu_insert_above">Insert Above</string>
+    <string name="menu_insert_below">Insert Below</string>
+    <string name="menu_play">Play</string>
+    <string name="menu_replay">RePlay</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_auto_insert_below">Auto Insert Below</string>
+    <string name="menu_auto_insert_brkt">Auto Insert ]</string>
+    <string name="menu_animate">Animate</string>
+    <string name="menu_quick_settings">Quick Settings</string>
+    <string name="result">Show Result</string>
+    <string name="menu_import">Import Script</string>
+    <string name="menu_export">Export Script</string>
+    
+    <string name="main_no_scripts">There are no scripts created yet!  Click the plus button to create one.</string>
+    <string name="no_commands">There are no commands yet!</string>
+    <string name="menu_accept">Accept</string>
+    <string name="menu_cancel">Cancel</string>
+    
+    <string name="button_cancel">Cancel</string>
+    <string name="button_ok">OK</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_no">No</string>
+    
+    <string name="app_sdcard_path">/SteelProfile/</string>
+    <string name="jpg">.jpg</string>
+    <string name="script_extension">.splst</string>
+
+    <string name="pref_animate">Animate</string>
+    <string name="pref_auto_insert_below">AutoInsertBelow</string>
+    <string name="pref_auto_insert_brkt">AutoInsertBrkt</string>
+    <string name="pref_script_tut">ScriptTutorial</string>
+    <string name="pref_command_tut">CommandTutorial</string>
+    <string name="pref_keypad_tut">KeypadTutorial</string>
+    <string name="pref_draw_tut">DrawTutorial</string>
+</resources>

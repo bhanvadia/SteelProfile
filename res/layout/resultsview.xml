@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/testDisplay1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left"
+        android:text="Display1" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/testDisplay2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left"
+        android:text="Display2" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/testDisplay3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left"
+        android:text="Display3" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/testDisplay4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left"
+        android:text="Display4" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/testDisplay5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left"
+        android:text="Display5" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/testDisplay6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left"
+        android:text="Display6" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/testDisplay7"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left"
+        android:text="Display7" >
+    </TextView>
+
+</LinearLayout>

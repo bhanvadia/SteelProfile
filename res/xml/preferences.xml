@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <PreferenceCategory android:title="Command Settings" android:key="Settings">
+        <CheckBoxPreference android:title="@string/menu_auto_insert_below"
+            android:defaultValue="true"
+            android:key="@string/pref_auto_insert_below"/>
+        <CheckBoxPreference android:title="@string/menu_auto_insert_brkt"
+            android:defaultValue="false"
+            android:key="@string/pref_auto_insert_brkt"/>
+        <CheckBoxPreference android:title="@string/menu_animate"
+            android:defaultValue="false"
+            android:key="@string/pref_animate"/>
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="General Settings" android:key="Settings">
+        <CheckBoxPreference android:title="Show Script Tutorial"
+            android:defaultValue="false"
+            android:key="@string/pref_script_tut"/>
+        <CheckBoxPreference android:title="Show Commands Tutorial"
+            android:defaultValue="false"
+            android:key="@string/pref_command_tut"/>
+        <CheckBoxPreference android:title="Show Keypad Tutorial"
+            android:defaultValue="false"
+            android:key="@string/pref_keypad_tut"/>
+        <CheckBoxPreference android:title="Show Draw Tutorial"
+            android:defaultValue="false"
+            android:key="@string/pref_draw_tut"/>
+    </PreferenceCategory>
+    
+    
+    <PreferenceCategory android:title="About" android:key="About">
+        
+    <Preference android:key="Harsh Bhanvadia" android:title="UNIVERSITÄT DUISBURG-ESSEN" android:summary="@string/website" />
+    </PreferenceCategory>
+    
+
+</PreferenceScreen>

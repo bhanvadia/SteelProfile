@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background" >
+
+    <Button
+        android:id="@+id/completeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:background="@color/holo_blue_light"
+        android:text="Hide"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/completeButton"
+        android:layout_alignBottom="@+id/completeButton"
+        android:layout_marginLeft="31dp"
+        android:layout_toRightOf="@+id/completeButton"
+        android:background="@color/holo_blue_light"
+        android:text="Next >"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/prevButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/completeButton"
+        android:layout_alignBottom="@+id/completeButton"
+        android:layout_marginRight="28dp"
+        android:layout_toLeftOf="@+id/completeButton"
+        android:background="@color/holo_blue_light"
+        android:text="&lt; Back"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewCmd1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/prevButton"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:text="Cmd"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewDesc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/completeButton"
+        android:layout_alignTop="@+id/textViewCmd1"
+        android:maxWidth="275dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewEx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewCmd1"
+        android:layout_marginTop="125dp"
+        android:layout_toRightOf="@+id/prevButton"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewEx"
+        android:layout_alignBottom="@+id/textViewEx"
+        android:layout_alignLeft="@+id/textViewCmd1"
+        android:text="Example:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
