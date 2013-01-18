@@ -92,7 +92,8 @@ public class ResultsCalc extends SherlockActivity {
         float In;
         Ie = (1/2) * (Isum + Isqr);
         In = (1/2) * (Isum - Isqr);
-
+        xc = xc - rMIDx;
+        yc = -(yc - rMIDy);
         
         display1 = (TextView) findViewById(R.id.testDisplay1);
         display1.setText("Profile Area = " + Area);
