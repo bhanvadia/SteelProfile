@@ -40,6 +40,14 @@ public class ResultsCalc extends SherlockActivity {
 	public float rMIDy;
 	public float xc;
     public float yc;
+    public float Ixc;
+    public float Iyc;
+    public float Ixyc;
+    public float Idel;
+    public float Isum;
+    public float Isqr;
+    public float Ie;
+    public float In;
 	
 	public void onCreate(Bundle savedInstanceState) {
 		setTheme(R.style.Theme_Sherlock);
@@ -74,31 +82,24 @@ public class ResultsCalc extends SherlockActivity {
         xc = rSY/Area;
         yc = rSX/Area;
 
-        float Ixc;
-        float Iyc;
-        float Ixyc;
         Ixc = rIX - yc*yc*Area;
         Iyc = rIY - xc*xc*Area;
         Ixyc= rIXY - xc*yc*Area;
 
-        float Idel;
-        float Isum;
-        float Isqr;
         Idel = Iyc - Ixc;
         Isum = Iyc + Ixc;
-        Isqr = FloatMath.sqrt(Idel*Idel + 4*Ixyc*Ixyc);
+        Isqr = FloatMath.sqrt((Idel*Idel) + 4*(Ixyc*Ixyc));
 
-        float Ie;
-        float In;
-        Ie = (1/2) * (Isum + Isqr);
-        In = (1/2) * (Isum - Isqr);
+        Ie = (Isum + Isqr)/2;
+        In = (Isum - Isqr)/2;
+        
         xc = xc - rMIDx;
         yc = -(yc - rMIDy);
         
         display1 = (TextView) findViewById(R.id.testDisplay1);
         display1.setText("Profile Area = " + Area);
         display2 = (TextView) findViewById(R.id.testDisplay2);
-        display2.setText("Centroid of Profile(screen ref) = (" + xc + "," + yc + ")");
+        display2.setText("Centroid of Profile(screen ref) = (" + xc + ", " + yc + ")");
         display3 = (TextView) findViewById(R.id.testDisplay3);
         display3.setText("First Moment Sx = " + rSX);
         display4 = (TextView) findViewById(R.id.testDisplay4);

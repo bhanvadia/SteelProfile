@@ -430,7 +430,24 @@ public class DrawView extends View {
 				mEndY = mMidY;
 				
 				if(mPenDown){
+					if (mT == 0)
+						mT = 1;
 					canvas.drawLine(mCurrX, mCurrY, mEndX, mEndY, mPaint);
+					cenx = 0;
+					ceny = 0;
+					mLx = mCurrX - mEndX;
+					mLy = mCurrY - mEndY;
+					cenx = (mCurrX + mEndX)/2;
+					ceny = (mCurrY + mEndY)/2;
+					mL = FloatMath.sqrt(mLx*mLx + mLy*mLy);
+					mA += mL * mT;
+					mCy += (mL * mT * ceny);
+					mCx += (mL * mT * cenx);
+					mSYi +=  cenx * (mL*mT);
+					mSXi +=  ceny * (mL*mT);
+					mIA_x += (((mEndY - mCurrY)*(mEndY - mCurrY))/12 + ceny*ceny)*(mL*mT);
+					mIA_y += (((mEndX - mCurrX)*(mEndX - mCurrX))/12 + cenx*cenx)*(mL*mT);
+					mIA_xy += (((mEndX - mCurrX)*(mEndY - mCurrY))/12 + cenx*ceny)*(mL*mT);
 				}
 				
 				mCurrX = mEndX;
