@@ -84,19 +84,16 @@ public class KeypadActivity extends SherlockActivity {
 	
 	final String[] descText = new String[] {"Move forward 'x' length",
 										    "Move backward 'x' length",
-										    "Rotate the Droid 'x' degrees left",
-										    "Rotate the Droid 'x' degrees right",
-										    "Show the Droid guy when animating the image",
-										    "Hide the Droid guy when animating the image",
-										    "Short for pen up.  This lifts the pen from the screen so that moving the Droid doesn’t draw a line",
-										    "Short for pen down.  This puts the pen down so that moving the Droid draws a line",
-										    "Repeats the actions between ‘RPT n’ and ‘]’ an n number of times.",
-										    "This closes off a RPT command. Anything between a RPT n and ] will be repeated.",
-										    "Sets the pen thickness.",
+										    "Rotate the 'x' degrees left",
+										    "Rotate the 'x' degrees right",
+										    "Short for pen up.  This lifts the pen from the screen so that move command doesn’t draw a line",
+										    "Short for pen down.  This puts the pen down so that move command draws a line",
+										    "Repeats the actions between 'RPT n' and ']' an n number of times.",
+										    "This closes off a RPT command. Anything between a 'RPT n' and ']' will be repeated.",
+										    "Sets thickness.",
 										    "Directly sets the direction of the Droid with 0 degrees pointing up.",
-										    "Inserts a random value between 0 and x. This can be used anywhere a number or color can be used.",
-										    "Sets the pen color.",
-										    "Returns the Droid to the home position (0, 0) at the middle of the screen"};
+										    "Sets the pen color x (select from patches).",
+										    "Returns the Droid to the home position at the middle of the screen (start)"};
 	
 	final String[] exText = new String[] {"FD 100",
 										  "BK 45",
@@ -369,7 +366,7 @@ public class KeypadActivity extends SherlockActivity {
 	        	finish();
 	        	return true;
 	        case R.id.menu_help:
-				Intent help = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.xatik.com/droid-draw-help/commands/"));
+				Intent help = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.uni-due.de/"));
 				startActivity(help);
 	   			return true;
 	        default:

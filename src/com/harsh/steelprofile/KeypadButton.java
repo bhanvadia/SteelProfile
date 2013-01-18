@@ -26,6 +26,7 @@ public enum KeypadButton {
 	, BK("BK",KeypadButtonCategory.DIRECTION)
 	, RT("RT",KeypadButtonCategory.DIRECTION)
 	, MAC("MAC",KeypadButtonCategory.COMMANDS)
+	, DOT(".",KeypadButtonCategory.NUMBER)
 	, ZERO("0",KeypadButtonCategory.NUMBER)
 	, ONE("1",KeypadButtonCategory.NUMBER)
 	, TWO("2",KeypadButtonCategory.NUMBER)

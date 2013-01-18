@@ -25,6 +25,8 @@ public class ResultsCalc extends SherlockActivity {
 	TextView display5;
 	TextView display6;
 	TextView display7;
+	TextView display8;
+	TextView display9;
 	
 	public float Area;
 	public float CentroidX;
@@ -106,6 +108,10 @@ public class ResultsCalc extends SherlockActivity {
         display6.setText("Moments of Inertia y = " + Iyc);
         display7 = (TextView) findViewById(R.id.testDisplay7);
         display7.setText("Moments of Inertia xy = " + Ixyc);
+        display8 = (TextView) findViewById(R.id.testDisplay8);
+        display8.setText("Moments of Inertia e = " + Ie);
+        display9 = (TextView) findViewById(R.id.testDisplay9);
+        display9.setText("Moments of Inertia n = " + In);
 	}
 	
 	public boolean onCreateOptionsMenu(Menu menu) {

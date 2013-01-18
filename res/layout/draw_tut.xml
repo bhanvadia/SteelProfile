@@ -42,7 +42,7 @@
         android:layout_alignLeft="@+id/imageView2"
         android:layout_below="@+id/imageView2"
         android:layout_marginTop="82dp"
-        android:src="@drawable/social_share" />
+        android:src="@drawable/av_play" />
 
 
     <TextView
@@ -53,14 +53,14 @@
         android:layout_alignLeft="@+id/completeButton"
         android:text="Redraw the script"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+    
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView3"
-        android:layout_toRightOf="@+id/imageView2"
-        android:text="Share the image with Xatik or friends!"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignLeft="@+id/completeButton"
+        android:text="Display Results"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

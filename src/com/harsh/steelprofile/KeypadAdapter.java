@@ -160,13 +160,13 @@ public class KeypadAdapter extends BaseAdapter {
 			KeypadButton.SEVEN, KeypadButton.EIGHT, KeypadButton.NINE,  KeypadButton.WHT,   KeypadButton.RED, 
 			KeypadButton.FOUR,  KeypadButton.FIVE,  KeypadButton.SIX,   KeypadButton.GRN,   KeypadButton.BLU,
 			KeypadButton.ONE,   KeypadButton.TWO,   KeypadButton.THREE, KeypadButton.PUR,   KeypadButton.YLW, 
-			KeypadButton.DUMMY, KeypadButton.ZERO,  KeypadButton.DUMMY, KeypadButton.BKSP,  KeypadButton.CLR };
+			KeypadButton.DOT, KeypadButton.ZERO,  KeypadButton.DOT, KeypadButton.BKSP,  KeypadButton.CLR };
 	
 	/* Create and populate keypad buttons array for landscape with KeypadButton enum values, laid out how it will be viewed */
 	private KeypadButton[] mButtons_land = 
 	{       KeypadButton.SEVEN, KeypadButton.EIGHT, KeypadButton.NINE,   KeypadButton.RPT,  KeypadButton.BRKT, KeypadButton.PT,  KeypadButton.SPC,   KeypadButton.WHT,  KeypadButton.RED,
 			KeypadButton.FOUR,  KeypadButton.FIVE,  KeypadButton.SIX,    KeypadButton.HOM,  KeypadButton.DIR,  KeypadButton.DUMMY, KeypadButton.DUMMY,    KeypadButton.GRN,  KeypadButton.BLU, 
 			KeypadButton.ONE,   KeypadButton.TWO,   KeypadButton.THREE,  KeypadButton.PU,   KeypadButton.FD,   KeypadButton.PD,  KeypadButton.DUMMY,    KeypadButton.PUR,  KeypadButton.YLW, 
-			KeypadButton.DUMMY, KeypadButton.ZERO,  KeypadButton.DUMMY,  KeypadButton.LT,   KeypadButton.BK,   KeypadButton.RT,  KeypadButton.DUMMY, KeypadButton.BKSP, KeypadButton.CLR };
+			KeypadButton.DOT, KeypadButton.ZERO,  KeypadButton.DOT,  KeypadButton.LT,   KeypadButton.BK,   KeypadButton.RT,  KeypadButton.DUMMY, KeypadButton.BKSP, KeypadButton.CLR };
 
 }

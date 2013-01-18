@@ -9,10 +9,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_gravity="center_horizontal"
-        android:gravity="left"
-        android:text="Display1" >
+        android:gravity="left" >
     </TextView>
     
     <TextView
@@ -20,10 +19,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_gravity="center_horizontal"
-        android:gravity="left"
-        android:text="Display2" >
+        android:gravity="left" >
     </TextView>
     
     <TextView
@@ -31,10 +29,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_gravity="center_horizontal"
-        android:gravity="left"
-        android:text="Display3" >
+        android:gravity="left" >
     </TextView>
     
     <TextView
@@ -42,10 +39,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_gravity="center_horizontal"
-        android:gravity="left"
-        android:text="Display4" >
+        android:gravity="left" >
     </TextView>
     
     <TextView
@@ -53,10 +49,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_gravity="center_horizontal"
-        android:gravity="left"
-        android:text="Display5" >
+        android:gravity="left" >
     </TextView>
     
     <TextView
@@ -64,10 +59,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_gravity="center_horizontal"
-        android:gravity="left"
-        android:text="Display6" >
+        android:gravity="left" >
     </TextView>
     
     <TextView
@@ -75,10 +69,29 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:layout_gravity="center_horizontal"
-        android:gravity="left"
-        android:text="Display7" >
+        android:gravity="left" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/testDisplay8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/testDisplay9"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left" >
     </TextView>
 
 </LinearLayout>
