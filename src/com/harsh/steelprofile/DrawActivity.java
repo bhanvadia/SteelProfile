@@ -68,8 +68,8 @@ public class DrawActivity extends SherlockActivity {
     public final static String SIS_LY = "LengthY";
     public final static String SIS_CX = "CentroidX";
     public final static String SIS_CY = "CentroidY";
-    public final static String SIS_SY = "SYY";
-    public final static String SIS_SX = "SXX";
+    public final static String SIS_ISY = "SYY";
+    public final static String SIS_ISX = "SXX";
     public final static String SIS_IA_Y = "IY";
     public final static String SIS_IA_X = "IX";
     public final static String SIS_IA_XY = "IXY";
@@ -155,8 +155,8 @@ public class DrawActivity extends SherlockActivity {
         			savedInstanceState.getFloat(SIS_LY),
         			savedInstanceState.getFloat(SIS_CX),
         			savedInstanceState.getFloat(SIS_CY),
-        			savedInstanceState.getFloat(SIS_SY),
-        			savedInstanceState.getFloat(SIS_SX),
+        			savedInstanceState.getFloat(SIS_ISY),
+        			savedInstanceState.getFloat(SIS_ISX),
         			savedInstanceState.getFloat(SIS_IA_Y),
         			savedInstanceState.getFloat(SIS_IA_X),
         			savedInstanceState.getFloat(SIS_IA_XY),
@@ -234,8 +234,8 @@ public class DrawActivity extends SherlockActivity {
 		outState.putFloat(SIS_LY, mDrawView.mLy);
 		outState.putFloat(SIS_CX, mDrawView.mCx);
 		outState.putFloat(SIS_CY, mDrawView.mCy);
-		outState.putFloat(SIS_SY, mDrawView.mSY);
-		outState.putFloat(SIS_SX, mDrawView.mSX);
+		outState.putFloat(SIS_ISY, mDrawView.mSYi);
+		outState.putFloat(SIS_ISX, mDrawView.mSXi);
 		outState.putFloat(SIS_IA_Y, mDrawView.mIA_y);
 		outState.putFloat(SIS_IA_X, mDrawView.mIA_x);
 		outState.putFloat(SIS_IA_XY, mDrawView.mIA_xy);
@@ -301,8 +301,8 @@ public class DrawActivity extends SherlockActivity {
 	        	ResultsView.putExtra("rA",mDrawView.mA);
 	        	ResultsView.putExtra("rCx",mDrawView.mCx);
 	        	ResultsView.putExtra("rCy",mDrawView.mCy);
-	        	ResultsView.putExtra("rSy",mDrawView.mSY);
-	        	ResultsView.putExtra("rSx",mDrawView.mSX);
+	        	ResultsView.putExtra("rSy",mDrawView.mSYi);
+	        	ResultsView.putExtra("rSx",mDrawView.mSXi);
 	        	ResultsView.putExtra("rIy",mDrawView.mIA_y);
 	        	ResultsView.putExtra("rIx",mDrawView.mIA_x);
 	        	ResultsView.putExtra("rIxy",mDrawView.mIA_xy);

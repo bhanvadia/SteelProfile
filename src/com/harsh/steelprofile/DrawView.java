@@ -63,8 +63,8 @@ public class DrawView extends View {
 	float ceny;
 	float mCx=0;
 	float mCy=0;
-	float mSY=0;
-	float mSX=0;
+	float mSYi=0;
+	float mSXi=0;
 	float mIA_x=0;
 	float mIA_y=0;
 	float mIA_xy=0;
@@ -120,7 +120,7 @@ public class DrawView extends View {
 	@SuppressWarnings("static-access")
 	public DrawView(Context context, ArrayList<Command> commands, int winWidth, int winHeight, boolean animate, Bitmap bitmap, boolean firstDraw,
 			boolean showTurtle, float currX, float currY, float endX, float endY, float angle, float T, float L, float A, float lx, float ly, float cx, float cy, 
-			float SY, float SX, float IA_y, float IA_x,float IA_xy, int paintColor, boolean penDown, int counter,
+			float iSY, float iSX, float IA_y, float IA_x,float IA_xy, int paintColor, boolean penDown, int counter,
 			int repeatArrayIndex, ArrayList<Integer> repeatIndices, ArrayList<Integer> numRepeats, ArrayList<Boolean> numRepeatsSet, PowerManager pm) {
 		super(context);
 		
@@ -158,8 +158,8 @@ public class DrawView extends View {
 		mLy=ly;
 		mCx=cx;
 		mCy=cy;
-		mSY=SY;
-		mSX=SX;
+		mSYi=iSY;
+		mSXi=iSX;
 		mIA_x=IA_x;
 		mIA_y=IA_y;
 		mIA_xy=IA_xy;
@@ -337,8 +337,8 @@ public class DrawView extends View {
 					mA += mL * mT;
 					mCy += (mL * mT * ceny);
 					mCx += (mL * mT * cenx);
-					mSY +=  cenx * (mL*mT);
-					mSX +=  ceny * (mL*mT);
+					mSYi +=  cenx * (mL*mT);
+					mSXi +=  ceny * (mL*mT);
 					mIA_x += (((mEndY - mCurrY)*(mEndY - mCurrY))/12 + ceny*ceny)*(mL*mT);
 					mIA_y += (((mEndX - mCurrX)*(mEndX - mCurrX))/12 + cenx*cenx)*(mL*mT);
 					mIA_xy += (((mEndX - mCurrX)*(mEndY - mCurrY))/12 + cenx*ceny)*(mL*mT);
@@ -365,8 +365,8 @@ public class DrawView extends View {
 					mA += mL * mT;
 					mCy += (mL * mT * ceny);
 					mCx += (mL * mT * cenx);
-					mSY +=  cenx * (mL*mT);
-					mSX +=  ceny * (mL*mT);
+					mSYi +=  cenx * (mL*mT);
+					mSXi +=  ceny * (mL*mT);
 					mIA_x += (((mEndY - mCurrY)*(mEndY - mCurrY))/12 + ceny*ceny)*(mL*mT);
 					mIA_y += (((mEndX - mCurrX)*(mEndX - mCurrX))/12 + cenx*cenx)*(mL*mT);
 					mIA_xy += (((mEndX - mCurrX)*(mEndY - mCurrY))/12 + cenx*ceny)*(mL*mT);

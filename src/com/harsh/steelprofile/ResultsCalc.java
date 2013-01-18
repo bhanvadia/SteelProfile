@@ -36,6 +36,8 @@ public class ResultsCalc extends SherlockActivity {
 	public float rIXY;
     public float rMIDx;
 	public float rMIDy;
+	public float xc;
+    public float yc;
 	
 	public void onCreate(Bundle savedInstanceState) {
 		setTheme(R.style.Theme_Sherlock);
@@ -58,7 +60,7 @@ public class ResultsCalc extends SherlockActivity {
 			CentroidX = extras.getFloat("rCx");
 			CentroidY = extras.getFloat("rCy");
 			rSY = extras.getFloat("rSy");
-			rSX = extras.getFloat("rSX");
+			rSX = extras.getFloat("rSx");
 			rIY = extras.getFloat("rIy");
 			rIX = extras.getFloat("rIx");
 			rIXY = extras.getFloat("rIxy");
@@ -67,8 +69,6 @@ public class ResultsCalc extends SherlockActivity {
 		}
         CentroidX = (CentroidX/Area);
         CentroidY = (CentroidY/Area);
-        float xc;
-        float yc;
         xc = rSY/Area;
         yc = rSX/Area;
 
@@ -105,7 +105,7 @@ public class ResultsCalc extends SherlockActivity {
         display6 = (TextView) findViewById(R.id.testDisplay6);
         display6.setText("Moments of Inertia y = " + Iyc);
         display7 = (TextView) findViewById(R.id.testDisplay7);
-        display6.setText("Moments of Inertia xy = " + Ixyc);
+        display7.setText("Moments of Inertia xy = " + Ixyc);
 	}
 	
 	public boolean onCreateOptionsMenu(Menu menu) {
