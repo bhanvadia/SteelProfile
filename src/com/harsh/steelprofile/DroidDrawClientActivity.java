@@ -189,10 +189,6 @@ public class DroidDrawClientActivity extends SherlockListActivity {
 	   			return true;
 			case R.id.menu_import:
 				importScript();
-				return true;
-			case R.id.menu_xatik:
-				Intent xatikSite = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.uni-due.de"));
-	   			startActivity(xatikSite);
 	   			return true;
 			default:
 				//Toast.makeText(this, "Got click: " + item.toString(), Toast.LENGTH_SHORT).show();
