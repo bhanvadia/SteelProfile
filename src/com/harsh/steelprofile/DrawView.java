@@ -354,6 +354,8 @@ public class DrawView extends View {
 					mEndY = (float) (mCurrY + ( Integer.parseInt(split[1]) * FloatMath.cos(mAngle) ));
 				
 				if(mPenDown){
+					if (mT == 0)
+						mT = 1;
 					canvas.drawLine(mCurrX, mCurrY, mEndX, mEndY, mPaint);
 					cenx = 0;
 					ceny = 0;
