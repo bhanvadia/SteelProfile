@@ -97,23 +97,23 @@ public class ResultsCalc extends SherlockActivity {
         yc = -(yc - rMIDy);
         
         display1 = (TextView) findViewById(R.id.testDisplay1);
-        display1.setText("Profile Area = " + Area);
+        display1.setText("Profile Area = " + Area/100 + " cm^2");
         display2 = (TextView) findViewById(R.id.testDisplay2);
         display2.setText("Centroid of Profile(screen ref) = (" + xc + ", " + yc + ")");
         display3 = (TextView) findViewById(R.id.testDisplay3);
-        display3.setText("First Moment Sx = " + rSX);
+        display3.setText("First Moment Sx = " + rSX/1000 + " cm^3");
         display4 = (TextView) findViewById(R.id.testDisplay4);
-        display4.setText("First Moment Sy = " + rSY);
+        display4.setText("First Moment Sy = " + rSY/1000 + " cm^3");
         display5 = (TextView) findViewById(R.id.testDisplay5);
-        display5.setText("Moments of Inertia x = " + Ixc);
+        display5.setText("Moments of Inertia x = " + Ixc/10000 + " cm^4");
         display6 = (TextView) findViewById(R.id.testDisplay6);
-        display6.setText("Moments of Inertia y = " + Iyc);
+        display6.setText("Moments of Inertia y = " + Iyc/10000 + " cm^4");
         display7 = (TextView) findViewById(R.id.testDisplay7);
-        display7.setText("Moments of Inertia xy = " + Ixyc);
+        display7.setText("Moments of Inertia xy = " + Ixyc/10000 + " cm^4");
         display8 = (TextView) findViewById(R.id.testDisplay8);
-        display8.setText("Moments of Inertia e = " + Ie);
+        display8.setText("Moments of Inertia zi = " + Ie/10000 + " cm^4");
         display9 = (TextView) findViewById(R.id.testDisplay9);
-        display9.setText("Moments of Inertia n = " + In);
+        display9.setText("Moments of Inertia eta = " + In/10000 + " cm^4");
 	}
 	
 	public boolean onCreateOptionsMenu(Menu menu) {
