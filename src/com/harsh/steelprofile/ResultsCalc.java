@@ -1,11 +1,14 @@
 package com.harsh.steelprofile;
 
 
-import android.os.Bundle;
+import java.util.List;
+import java.util.ArrayList;
 import android.util.FloatMath;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.os.Bundle;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -14,19 +17,10 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 
-
 public class ResultsCalc extends SherlockActivity {
 	
-	TextView display0;
-	TextView display1;
-	TextView display2;
-	TextView display3;
-	TextView display4;
-	TextView display5;
-	TextView display6;
-	TextView display7;
-	TextView display8;
-	TextView display9;
+	ListView list;
+    private List<String> List_result;
 	
 	public float Area;
 	public float CentroidX;
@@ -60,10 +54,21 @@ public class ResultsCalc extends SherlockActivity {
         frame.addView(LayoutInflater.from(getBaseContext()).inflate(R.layout.resultsview, null));
         
         setContentView(frame);
+        
         ActionBar actionBarr = getSupportActionBar();
         actionBarr.setDisplayHomeAsUpEnabled(true);
         
-        Bundle extras = getIntent().getExtras();
+        FurtherCalc();
+        
+        List_result =new ArrayList<String>();
+        list = (ListView)findViewById(R.id.resultslist);        
+        CreateListView();
+        
+	}
+	
+	private void FurtherCalc()
+	{
+		Bundle extras = getIntent().getExtras();
 
 		if (extras != null) {
 			Area = extras.getFloat("rA");
@@ -95,26 +100,22 @@ public class ResultsCalc extends SherlockActivity {
         
         xc = xc - rMIDx;
         yc = -(yc - rMIDy);
-        
-        display1 = (TextView) findViewById(R.id.testDisplay1);
-        display1.setText("Profile Area = " + Area/100 + " cm^2");
-        display2 = (TextView) findViewById(R.id.testDisplay2);
-        display2.setText("Centroid of Profile(screen ref) = (" + xc + ", " + yc + ")");
-        display3 = (TextView) findViewById(R.id.testDisplay3);
-        display3.setText("First Moment Sx = " + rSX/1000 + " cm^3");
-        display4 = (TextView) findViewById(R.id.testDisplay4);
-        display4.setText("First Moment Sy = " + rSY/1000 + " cm^3");
-        display5 = (TextView) findViewById(R.id.testDisplay5);
-        display5.setText("Moments of Inertia x = " + Ixc/10000 + " cm^4");
-        display6 = (TextView) findViewById(R.id.testDisplay6);
-        display6.setText("Moments of Inertia y = " + Iyc/10000 + " cm^4");
-        display7 = (TextView) findViewById(R.id.testDisplay7);
-        display7.setText("Moments of Inertia xy = " + Ixyc/10000 + " cm^4");
-        display8 = (TextView) findViewById(R.id.testDisplay8);
-        display8.setText("Moments of Inertia zi = " + Ie/10000 + " cm^4");
-        display9 = (TextView) findViewById(R.id.testDisplay9);
-        display9.setText("Moments of Inertia eta = " + In/10000 + " cm^4");
 	}
+	
+	private void CreateListView()
+    {
+         List_result.add("Profile Area = " + Area/100 + " cm^2");
+         List_result.add("Centroid of Profile(screen ref) = (" + xc + ", " + yc + ")");
+         List_result.add("First Moment Sx = " + rSX/1000 + " cm^3");
+         List_result.add("First Moment Sy = " + rSY/1000 + " cm^3");
+         List_result.add("Moments of Inertia x = " + Ixc/10000 + " cm^4");
+         List_result.add("Moments of Inertia y = " + Iyc/10000 + " cm^4");
+         List_result.add("Moments of Inertia xy = " + Ixyc/10000 + " cm^4");
+         List_result.add("Moments of Inertia zi = " + Ie/10000 + " cm^4");
+         List_result.add("Moments of Inertia eta = " + In/10000 + " cm^4");
+         //Create an adapter for the listView and add the ArrayList to the adapter.
+         list.setAdapter(new ArrayAdapter<String>(ResultsCalc.this, android.R.layout.simple_list_item_1,List_result));
+    }
 	
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getSupportMenuInflater();
