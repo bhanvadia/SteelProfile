@@ -40,7 +40,6 @@ import android.view.WindowManager;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
@@ -58,7 +57,6 @@ import com.harsh.steelprofile.databases.Script;
 import com.harsh.steelprofile.databases.ScriptsDbAdapter;
 import com.harsh.steelprofile.common.ImportExport;
 
-@SuppressWarnings("unused")
 public class DroidDrawClientActivity extends SherlockListActivity {
 	
 	private static final int NEW_SCRIPT = 0;

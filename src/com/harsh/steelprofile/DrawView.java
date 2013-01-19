@@ -70,12 +70,11 @@ public class DrawView extends View {
 	float mIA_xy=0;
 	Random randGenerator;
 	
-	boolean mShowTurtle;
-	private Bitmap mTurtle;
+	boolean mShowIcon;
+	private Bitmap mIcon;
 	
 	PowerManager.WakeLock mWakelock;
 	
-	@SuppressWarnings("static-access")
 	public DrawView(Context context, ArrayList<Command> commands, int winWidth, int winHeight, boolean animate, PowerManager pm) {
 		super(context);
 				
@@ -83,7 +82,7 @@ public class DrawView extends View {
 		
 		if (animate) {
 			mWakelock = pm.newWakeLock(
-		        pm.SCREEN_DIM_WAKE_LOCK, "Animate");
+		        PowerManager.SCREEN_DIM_WAKE_LOCK, "Animate");
 		}
 		
 		mPaint.setColor(Color.WHITE);
@@ -94,7 +93,7 @@ public class DrawView extends View {
 		
 		mAnimate = animate;
 		mFirstDraw = true;
-		mShowTurtle = true;
+		mShowIcon = true;
 		
 		mScaleDetector = new ScaleGestureDetector(context, new ScaleListener());
 		
@@ -117,9 +116,8 @@ public class DrawView extends View {
 		mBitmapCanvas.setBitmap(mScreenBitmap);
 	}
 	
-	@SuppressWarnings("static-access")
 	public DrawView(Context context, ArrayList<Command> commands, int winWidth, int winHeight, boolean animate, Bitmap bitmap, boolean firstDraw,
-			boolean showTurtle, float currX, float currY, float endX, float endY, float angle, float T, float L, float A, float lx, float ly, float cx, float cy, 
+			boolean showIcon, float currX, float currY, float endX, float endY, float angle, float T, float L, float A, float lx, float ly, float cx, float cy, 
 			float iSY, float iSX, float IA_y, float IA_x,float IA_xy, int paintColor, boolean penDown, int counter,
 			int repeatArrayIndex, ArrayList<Integer> repeatIndices, ArrayList<Integer> numRepeats, ArrayList<Boolean> numRepeatsSet, PowerManager pm) {
 		super(context);
@@ -128,14 +126,14 @@ public class DrawView extends View {
 
 		if (animate) {
 			mWakelock = pm.newWakeLock(
-		        pm.SCREEN_DIM_WAKE_LOCK, "Animate");
+		        PowerManager.SCREEN_DIM_WAKE_LOCK, "Animate");
 		}
 		
 		this.setDrawingCacheEnabled(true);
 		randGenerator = new Random();
 		mScaleDetector = new ScaleGestureDetector(context, new ScaleListener());
 		
-		mShowTurtle = showTurtle;
+		mShowIcon = showIcon;
 		
 		mAnimate = animate;
 		
@@ -164,7 +162,7 @@ public class DrawView extends View {
 		mIA_y=IA_y;
 		mIA_xy=IA_xy;
 
-		/* flipped for screen rotation */
+		/* Mirror for Screen Rotation */
 		mPosX = -mMidY/2;
 		mPosY = -mMidX/2;
 		
@@ -187,7 +185,7 @@ public class DrawView extends View {
 	}
 	
 	private void initialize() {
-		mTurtle = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
+		mIcon = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
 	}
 	
 	public void cleanUp() {
@@ -272,7 +270,7 @@ public class DrawView extends View {
 	    // We're done drawing
 	    if(mCounter >= mCommands.size()) {
 			mFirstDraw = false;
-			mShowTurtle = false;
+			mShowIcon = false;
 	    }
 	    
 	    if (mFirstDraw) {
@@ -291,8 +289,8 @@ public class DrawView extends View {
 	    
 	    canvas.drawBitmap(mScreenBitmap, 0, 0, mPaint);
 	    
-	    if(mShowTurtle && mAnimate) {
-	    	canvas.drawBitmap(mTurtle, mCurrX - (mTurtle.getWidth() / 2), mCurrY - mTurtle.getHeight(), mPaint);
+	    if(mShowIcon && mAnimate) {
+	    	canvas.drawBitmap(mIcon, mCurrX - (mIcon.getWidth() / 2), mCurrY - mIcon.getHeight(), mPaint);
 	    }
 	    
 		canvas.restore();

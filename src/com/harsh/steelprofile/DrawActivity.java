@@ -55,7 +55,7 @@ import com.harsh.steelprofile.databases.ScriptsDbAdapter;
 public class DrawActivity extends SherlockActivity {
 	public final static String SIS_BITMAP = "Bitmap";
 	public final static String SIS_FIRSTDRAW = "FirstDraw";
-	public final static String SIS_SHOWTURTLE = "ShowTurtle";
+	public final static String SIS_SHOWICON = "ShowIcon";
 	public final static String SIS_CURRX = "CurrX";
 	public final static String SIS_CURRY = "CurrY";
 	public final static String SIS_ENDX = "EndX";
@@ -142,7 +142,7 @@ public class DrawActivity extends SherlockActivity {
         	mDrawView = new DrawView(this, mCommands, winWidth, winHeight, 
         			animate, (Bitmap) savedInstanceState.getParcelable(SIS_BITMAP),
         			savedInstanceState.getBoolean(SIS_FIRSTDRAW),
-        			savedInstanceState.getBoolean(SIS_SHOWTURTLE),
+        			savedInstanceState.getBoolean(SIS_SHOWICON),
         			savedInstanceState.getFloat(SIS_CURRX),
         			savedInstanceState.getFloat(SIS_CURRY),
         			savedInstanceState.getFloat(SIS_ENDX),
@@ -221,7 +221,7 @@ public class DrawActivity extends SherlockActivity {
 		super.onSaveInstanceState(outState);
 		outState.putParcelable(SIS_BITMAP, mDrawView.mScreenBitmap);
 		outState.putBoolean(SIS_FIRSTDRAW, mDrawView.mFirstDraw);
-		outState.putBoolean(SIS_SHOWTURTLE, mDrawView.mShowTurtle);
+		outState.putBoolean(SIS_SHOWICON, mDrawView.mShowIcon);
 		outState.putFloat(SIS_CURRX, mDrawView.mCurrX);
 		outState.putFloat(SIS_CURRY, mDrawView.mCurrY);
 		outState.putFloat(SIS_ENDX, mDrawView.mEndX);

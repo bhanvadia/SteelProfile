@@ -73,9 +73,6 @@ public class CommandsDbAdapter {
 		initialValues.put(COLUMN_SCRIPT_ID, scriptId);
 		initialValues.put(COLUMN_ORDER, order);
 		initialValues.put(COLUMN_COMMAND, command);
-		
-		@SuppressWarnings("unused")
-		long insertId = mDb.insert(DATABASE_TABLE, null, initialValues);
 	}
 	
 	public List<Command> fetchCommandsForScript(long scriptId) {
