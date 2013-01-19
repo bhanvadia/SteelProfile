@@ -285,7 +285,7 @@ public class KeypadActivity extends SherlockActivity {
 				mUserInputText.setText("");
 			}
 			else{
-				if(Character.isDigit(split[split.length - 1].charAt(0))){
+				if(Character.isDigit(split[split.length - 1].charAt(0)) || (split[split.length - 1].charAt(0)) == '.'){
 					if(endIndex < 1)
 						mUserInputText.setText("");
 					else
@@ -305,7 +305,7 @@ public class KeypadActivity extends SherlockActivity {
 	    	break;
 		default:
 			if(currentInputLength < 21){
-				if (Character.isDigit(text.charAt(0))) {
+				if (Character.isDigit(text.charAt(0)) || (text.charAt(0)) == '.' ) {
 					mUserInputText.append(text);
 				}
 				else{

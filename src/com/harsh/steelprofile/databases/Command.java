@@ -127,7 +127,8 @@ public class Command implements Parcelable {
 					case PT:
 					case DIR:
 						try {
-							Integer.parseInt(split[1]);
+							Float.parseFloat(split[1]);
+						/*	Integer.parseInt(split[1]); */
 							valid = true;
 						}
 						catch (NumberFormatException ex) {

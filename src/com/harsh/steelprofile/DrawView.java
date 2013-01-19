@@ -320,8 +320,8 @@ public class DrawView extends View {
 		if(cmd != null) {
 			switch (cmd) {
 			case FD:
-					mEndX = (float) (mCurrX + ( Integer.parseInt(split[1]) * FloatMath.sin(mAngle) ));
-					mEndY = (float) (mCurrY + -( Integer.parseInt(split[1]) * FloatMath.cos(mAngle) ));
+					mEndX = (float) (mCurrX + ( (int)Float.parseFloat(split[1]) * FloatMath.sin(mAngle) ));
+					mEndY = (float) (mCurrY + -( (int)Float.parseFloat(split[1]) * FloatMath.cos(mAngle) ));
 				
 				if(mPenDown){
 					if (mT == 0)
@@ -350,8 +350,8 @@ public class DrawView extends View {
                 break;
                 
 			case BK:
-					mEndX = (float) (mCurrX + -( Integer.parseInt(split[1]) * FloatMath.sin(mAngle) ));
-					mEndY = (float) (mCurrY + ( Integer.parseInt(split[1]) * FloatMath.cos(mAngle) ));
+					mEndX = (float) (mCurrX + -( (int)Float.parseFloat(split[1]) * FloatMath.sin(mAngle) ));
+					mEndY = (float) (mCurrY + ( (int)Float.parseFloat(split[1]) * FloatMath.cos(mAngle) ));
 				
 				if(mPenDown){
 					if (mT == 0)
@@ -380,15 +380,15 @@ public class DrawView extends View {
 				break;
 
 			case LT:
-					mAngle -= ( Integer.parseInt(split[1]) * (Math.PI / 180) );
+					mAngle -= ( (int)Float.parseFloat(split[1]) * (Math.PI / 180) );
 				break;
 
 			case RT:
-					mAngle += ( Integer.parseInt(split[1]) * (Math.PI / 180) );
+					mAngle += ( (int)Float.parseFloat(split[1]) * (Math.PI / 180) );
 				break;
 				
 			case DIR:
-					mAngle = (float) ( Integer.parseInt(split[1]) * (Math.PI / 180) );
+					mAngle = (float) ( (int)Float.parseFloat(split[1]) * (Math.PI / 180) );
 				break;
 				
 			case PU:
@@ -455,20 +455,20 @@ public class DrawView extends View {
 				break;
 				
 			case PT:
-					mPaint.setStrokeWidth(Integer.parseInt(split[1]));
-					mT = Integer.parseInt(split[1]);
+					mPaint.setStrokeWidth((int)Float.parseFloat(split[1]));
+					mT = Float.parseFloat(split[1]);
 				break;
 				
 			case RPT:
 				mRepeatArrayIndex++;
 				
 				if(mNumRepeatsSet.size() < (mRepeatArrayIndex + 1)){
-					mNumRepeats.add(mRepeatArrayIndex, Integer.parseInt(split[1]));
+					mNumRepeats.add(mRepeatArrayIndex, (int)Float.parseFloat(split[1]));
 					mNumRepeatsSet.add(mRepeatArrayIndex, true);
 					mRepeatIndices.add(mRepeatArrayIndex, counter);
 				}
 				else if(!mNumRepeatsSet.get(mRepeatArrayIndex)){
-					mNumRepeats.set(mRepeatArrayIndex, Integer.parseInt(split[1]));
+					mNumRepeats.set(mRepeatArrayIndex, (int)Float.parseFloat(split[1]));
 					mNumRepeatsSet.set(mRepeatArrayIndex, true);
 					mRepeatIndices.set(mRepeatArrayIndex, counter);
 				}
