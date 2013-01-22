@@ -1,13 +1,13 @@
 package com.harsh.steelprofile;
 
 
-import java.util.List;
+import java.util.HashMap;
 import java.util.ArrayList;
 import android.util.FloatMath;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -20,7 +20,6 @@ import com.actionbarsherlock.view.MenuItem;
 public class ResultsCalc extends SherlockActivity {
 	
 	ListView list;
-    private List<String> List_result;
 	
 	public float Area;
 	public float CentroidX;
@@ -58,18 +57,74 @@ public class ResultsCalc extends SherlockActivity {
         ActionBar actionBarr = getSupportActionBar();
         actionBarr.setDisplayHomeAsUpEnabled(true);
         
+        // Further Calculations
         FurtherCalc();
         
-        List_result =new ArrayList<String>();
-        list = (ListView)findViewById(R.id.resultslist);        
-        CreateListView();
+        list = (ListView)findViewById(R.id.resultslist);  
+        
+        ArrayList<HashMap<String, String>> listresult = new ArrayList<HashMap<String, String>>();
+        
+        HashMap<String, String> map = new HashMap<String, String>();
+		map.put("props", "Area");
+		map.put("res", String.format("%.1f", Area/100));
+		map.put("uni", "cm^2");
+		listresult.add(map);
+		
+		map = new HashMap<String, String>();
+		map.put("props", "Sx");
+		map.put("res", String.format("%.1f", rSX/1000));
+		map.put("uni", "cm^3");
+		listresult.add(map);
+		
+		map = new HashMap<String, String>();
+		map.put("props", "Sy");
+		map.put("res", String.format("%.1f", rSY/1000));
+		map.put("uni", "cm^3");
+		listresult.add(map);
+		
+		map = new HashMap<String, String>();
+		map.put("props", "I_x");
+		map.put("res", String.format("%.0f", Ixc/10000));
+		map.put("uni", "cm^4");
+		listresult.add(map);
+		
+		map = new HashMap<String, String>();
+		map.put("props", "I_y");
+		map.put("res", String.format("%.0f", Iyc/10000));
+		map.put("uni", "cm^4");
+		listresult.add(map);
+		
+		map = new HashMap<String, String>();
+		map.put("props", "I_xy");
+		map.put("res", String.format("%.0f", Ixyc/10000));
+		map.put("uni", "cm^4");
+		listresult.add(map);
+		
+		map = new HashMap<String, String>();
+		map.put("props", "I_zi");
+		map.put("res", String.format("%.0f", Ie/10000));
+		map.put("uni", "cm^4");
+		listresult.add(map);
+		
+		map = new HashMap<String, String>();
+		map.put("props", "I_eta");
+		map.put("res", String.format("%.0f", In/10000));
+		map.put("uni", "cm^4");
+		listresult.add(map);
+		
+         
+        // listresult.add("Centroid of Profile(screen ref) = (" + xc + ", " + yc + ")");
+         //Create an adapter for the listView and add the ArrayList to the adapter.
+		SimpleAdapter mResult = new SimpleAdapter(this, listresult, R.layout.row,
+	            new String[] {"props", "res", "uni"}, new int[] {R.id.property, R.id.results, R.id.units});
+		list.setAdapter(mResult);
         
 	}
 	
 	private void FurtherCalc()
 	{
+		//Importing values from DrawActivity
 		Bundle extras = getIntent().getExtras();
-
 		if (extras != null) {
 			Area = extras.getFloat("rA");
 			CentroidX = extras.getFloat("rCx");
@@ -82,6 +137,7 @@ public class ResultsCalc extends SherlockActivity {
 			rMIDx = extras.getFloat("rMidx");
 			rMIDy = extras.getFloat("rMidy");
 		}
+		
         CentroidX = (CentroidX/Area);
         CentroidY = (CentroidY/Area);
         xc = rSY/Area;
@@ -101,22 +157,7 @@ public class ResultsCalc extends SherlockActivity {
         xc = xc - rMIDx;
         yc = -(yc - rMIDy);
 	}
-	
-	private void CreateListView()
-    {
-         List_result.add("Profile Area = " + Area/100 + " cm^2");
-         List_result.add("Centroid of Profile(screen ref) = (" + xc + ", " + yc + ")");
-         List_result.add("First Moment Sx = " + rSX/1000 + " cm^3");
-         List_result.add("First Moment Sy = " + rSY/1000 + " cm^3");
-         List_result.add("Moments of Inertia x = " + Ixc/10000 + " cm^4");
-         List_result.add("Moments of Inertia y = " + Iyc/10000 + " cm^4");
-         List_result.add("Moments of Inertia xy = " + Ixyc/10000 + " cm^4");
-         List_result.add("Moments of Inertia zi = " + Ie/10000 + " cm^4");
-         List_result.add("Moments of Inertia eta = " + In/10000 + " cm^4");
-         //Create an adapter for the listView and add the ArrayList to the adapter.
-         list.setAdapter(new ArrayAdapter<String>(ResultsCalc.this, android.R.layout.simple_list_item_1,List_result));
-    }
-	
+
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getSupportMenuInflater();
         inflater.inflate(R.menu.result, menu);
