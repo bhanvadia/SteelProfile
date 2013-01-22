@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2012 Xatik Group
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.harsh.steelprofile;
 
 import java.util.Stack;
@@ -271,7 +255,6 @@ public class KeypadActivity extends SherlockActivity {
 	}
 	
 	private void ProcessKeypadInput(KeypadButton keypadButton) {
-		//Toast.makeText(this, keypadButton.getText(), Toast.LENGTH_SHORT).show();
 		String text = keypadButton.getText().toString();
 		String currentInput = mUserInputText.getText().toString();
         int currentInputLength = currentInput.length();
@@ -336,12 +319,8 @@ public class KeypadActivity extends SherlockActivity {
 	        	finish();
 	            return true;
 	        case R.id.menu_keyboard_accept:
-	        	//Toast.makeText(this, "Input accepted:  " + mUserInputText.getText().toString(), Toast.LENGTH_SHORT).show();
 	        	
 	        	if (Command.Validate(mUserInputText.getText().toString())) {
-	        		//Toast.makeText(this, "Input is valid", Toast.LENGTH_SHORT).show();
-	        		//Toast.makeText(this, "Input is valid  Script id:" + mScript.mId + "  Position: " + mPosition + "  input: " + mUserInputText.getText().toString(), Toast.LENGTH_SHORT).show();
-	        		//insertCommand(mScript.mId, mPosition, mUserInputText.getText().toString());
 	        		Intent command = this.getIntent();
 	        		command.putExtra(CommandsDbAdapter.COLUMN_SCRIPT_ID, mScript.mId);
 	        		command.putExtra(CommandsDbAdapter.COLUMN_ORDER, mPosition);
