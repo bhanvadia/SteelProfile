@@ -350,9 +350,9 @@ public class DrawActivity extends SherlockActivity {
 			bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
 			fos.close();
 		} catch (FileNotFoundException e) {
-			Log.e("DroidDrawShare", "File not found", e);
+			Log.e("DrawShare", "File not found", e);
 		} catch (IOException e) {
-			Log.e("DroidDrawShare", "IOException", e);
+			Log.e("DrawShare", "IOException", e);
 		}
 		
 		return file;

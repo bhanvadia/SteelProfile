@@ -41,7 +41,7 @@ import com.harsh.steelprofile.databases.Script;
 import com.harsh.steelprofile.databases.ScriptsDbAdapter;
 import com.harsh.steelprofile.common.ImportExport;
 
-public class DroidDrawClientActivity extends SherlockListActivity {
+public class DrawClientActivity extends SherlockListActivity {
 	
 	private static final int NEW_SCRIPT = 0;
 	private static final int EDIT_SCRIPT = 1;

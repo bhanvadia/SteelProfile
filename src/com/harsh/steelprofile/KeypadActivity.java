@@ -75,9 +75,9 @@ public class KeypadActivity extends SherlockActivity {
 										    "Repeats the actions between 'RPT n' and ']' an n number of times.",
 										    "This closes off a RPT command. Anything between a 'RPT n' and ']' will be repeated.",
 										    "Sets thickness.",
-										    "Directly sets the direction of the Droid with 0 degrees pointing up.",
+										    "Directly sets the direction of the Drawing with 0 degrees = pointing up.",
 										    "Sets the pen color x (select from patches).",
-										    "Returns the Droid to the home position at the middle of the screen (start)"};
+										    "Returns the Drawing to the home position at the middle of the screen (start)"};
 	
 	final String[] exText = new String[] {"FD 100",
 										  "BK 45",
