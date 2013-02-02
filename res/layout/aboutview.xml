@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ScrollView android:id="@+id/aboutscrollview" 
+		android:orientation="vertical"
+		android:layout_width="match_parent" 
+		android:layout_height="match_parent">    
+		<LinearLayout
+		    android:orientation="vertical"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content">
+			<TextView android:text="About: "
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:paddingTop="15dp"
+				android:paddingLeft="15dp"
+				android:textStyle="bold"
+				android:textColor="#ffffff" />
+			<TextView android:text="This application was developed to handle and maninpulate Steel Profiles with custom shapes on a Mobile Device.\n\nResults are as for varifying and overview purpose only, and should not be considered as replacement of scientific calculations.\n"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:paddingLeft="15dp"		
+				android:layout_gravity="center_vertical"
+				android:textColor="#ffffffff" />		
+			<TextView android:text="Copyright \u00a9 2013 Harsh Bhanvadia &lt;bhanvadia@gmail.com&gt;\nUniversität Duisburg-Essen"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:paddingLeft="15dp"		
+				android:layout_gravity="center_vertical"
+				android:textStyle="bold"
+				android:textColor="#ffff8080" />		
+			<TextView android:text="\nContact: bhanvadia@gmail.com"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:paddingLeft="15dp"		
+				android:layout_gravity="center_vertical"
+				android:textColor="#ffffff" />											
+			</LinearLayout>
+	</ScrollView>	
+
+</LinearLayout>

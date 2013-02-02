@@ -10,7 +10,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
@@ -165,9 +164,18 @@ public class DrawClientActivity extends SherlockListActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-			case R.id.menu_help:
-				Intent help = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.uni-due.de"));
-				startActivity(help);
+			case R.id.menu_about:
+				LayoutInflater li = LayoutInflater.from(this);
+        		View view = li.inflate(R.layout.aboutview, null);     
+				new AlertDialog.Builder(DrawClientActivity.this)
+        		.setTitle("About")
+        		.setView(view)
+        		.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                	public void onClick(DialogInterface dialog, int whichButton) {
+                        //Log.d(MSG_TAG, "Close pressed");
+                	}
+        		})
+        		.show();
 	   			return true;
 			case R.id.menu_import:
 				importScript();

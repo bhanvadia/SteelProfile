@@ -25,7 +25,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.ContextMenu;
@@ -286,9 +285,18 @@ public class CommandsActivity extends SherlockListActivity {
 	        	}
 	        	item.setChecked(mAnimate);
 	        	return true;
-	        case R.id.menu_help:
-				Intent help = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.uni-due.de"));
-				startActivity(help);
+	        case R.id.menu_about:
+				LayoutInflater li = LayoutInflater.from(this);
+        		View view = li.inflate(R.layout.aboutview, null);     
+				new AlertDialog.Builder(CommandsActivity.this)
+        		.setTitle("About")
+        		.setView(view)
+        		.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                	public void onClick(DialogInterface dialog, int whichButton) {
+                        //Log.d(MSG_TAG, "Close pressed");
+                	}
+        		})
+        		.show();
 				return true;
 	        case R.id.menu_commands_export:
 	        	ImportExport.ExportDialog(this, getResources().getInteger(R.integer.database_version), mScript, mCommands);

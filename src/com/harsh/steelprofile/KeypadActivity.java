@@ -2,10 +2,11 @@ package com.harsh.steelprofile;
 
 import java.util.Stack;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
@@ -344,9 +345,18 @@ public class KeypadActivity extends SherlockActivity {
 	        	setResult(RESULT_CANCELED);
 	        	finish();
 	        	return true;
-	        case R.id.menu_help:
-				Intent help = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.uni-due.de/"));
-				startActivity(help);
+	        case R.id.menu_about:
+				LayoutInflater li = LayoutInflater.from(this);
+        		View view = li.inflate(R.layout.aboutview, null);     
+				new AlertDialog.Builder(KeypadActivity.this)
+        		.setTitle("About")
+        		.setView(view)
+        		.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                	public void onClick(DialogInterface dialog, int whichButton) {
+                        //Log.d(MSG_TAG, "Close pressed");
+                	}
+        		})
+        		.show();
 	   			return true;
 	        default:
 	        	Toast.makeText(this, "Got click: " + item.toString(), Toast.LENGTH_SHORT).show();

@@ -3,8 +3,8 @@
     <item android:id="@+id/menu_import"
 	      android:title="@string/menu_import"
 	      android:showAsAction="never" />
-    <item android:id="@+id/menu_help"
+    <item android:id="@+id/menu_about"
 	      android:icon="@drawable/action_help"
-	      android:title="@string/menu_help"
+	      android:title="@string/menu_about"
 	      android:showAsAction="never" />
 </menu>
