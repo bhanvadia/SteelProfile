@@ -75,19 +75,22 @@ public class DbAdapter {
 	}
 	
 	private static void InsertHExample(SQLiteDatabase db) {
-		db.execSQL("INSERT INTO Scripts (" + ScriptsDbAdapter.COLUMN_NAME + ") VALUES ('Ex_H_Profile')");
+		db.execSQL("INSERT INTO Scripts (" + ScriptsDbAdapter.COLUMN_NAME + ") VALUES ('Ex_HEA200')");
 		InsertCommand(db, 1, 0, "DIR 90");
-		InsertCommand(db, 1, 1, "FD 100");
-		InsertCommand(db, 1, 2, "PU");
-		InsertCommand(db, 1, 3, "BK 50");
-		InsertCommand(db, 1, 4, "DIR 0");
-		InsertCommand(db, 1, 5, "PD");
-		InsertCommand(db, 1, 6, "FD 150");
-		InsertCommand(db, 1, 7, "DIR 90");
-		InsertCommand(db, 1, 8, "PU");
-		InsertCommand(db, 1, 9, "BK 50");
-		InsertCommand(db, 1,10, "PD");
-		InsertCommand(db, 1,11, "FD 100");
+		InsertCommand(db, 1, 1, "PT 10");
+		InsertCommand(db, 1, 2, "FD 200");
+		InsertCommand(db, 1, 3, "PU");
+		InsertCommand(db, 1, 4, "BK 100");
+		InsertCommand(db, 1, 5, "DIR 0");
+		InsertCommand(db, 1, 6, "PD");
+		InsertCommand(db, 1, 7, "PT 6.5");
+		InsertCommand(db, 1, 8, "FD 190");
+		InsertCommand(db, 1, 9, "DIR 90");
+		InsertCommand(db, 1,10, "PU");
+		InsertCommand(db, 1,11, "BK 100");
+		InsertCommand(db, 1,12, "PD");
+		InsertCommand(db, 1,13, "PT 10");
+		InsertCommand(db, 1,14, "FD 200");
 	}
 	
 	private static void InsertUExample(SQLiteDatabase db) {
