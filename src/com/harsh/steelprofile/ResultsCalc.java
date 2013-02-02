@@ -116,13 +116,13 @@ public class ResultsCalc extends SherlockActivity {
 		listresult.add(map);
 		
 		map = new HashMap<String, String>();
-		map.put("props", "I_zi");
+		map.put("props", "I_\u03be");
 		map.put("res", String.format("%.0f", Ie/10000));
 		map.put("uni", "cm^4");
 		listresult.add(map);
 		
 		map = new HashMap<String, String>();
-		map.put("props", "I_eta");
+		map.put("props", "I_\u03b7");
 		map.put("res", String.format("%.0f", In/10000));
 		map.put("uni", "cm^4");
 		listresult.add(map);
