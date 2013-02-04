@@ -95,32 +95,43 @@ public class DbAdapter {
 	
 	private static void InsertUExample(SQLiteDatabase db) {
 		db.execSQL("INSERT INTO Scripts (" + ScriptsDbAdapter.COLUMN_NAME + ") VALUES ('Ex_U_Profile')");
-		InsertCommand(db, 2, 0, "BK 100");
-		InsertCommand(db, 2, 1, "RT 90");
-		InsertCommand(db, 2, 2, "FD 50");
-		InsertCommand(db, 2, 3, "LT 90");
-		InsertCommand(db, 2, 4, "FD 100");
+		InsertCommand(db, 2, 0, "PT 5");
+		InsertCommand(db, 2, 1, "BK 100");
+		InsertCommand(db, 2, 2, "RT 90");
+		InsertCommand(db, 2, 3, "PT 8");
+		InsertCommand(db, 2, 4, "FD 50");
+		InsertCommand(db, 2, 5, "LT 90");
+		InsertCommand(db, 2, 6, "PT 5");
+		InsertCommand(db, 2, 7, "FD 100");
 	}
 	
 	private static void InsertCExample(SQLiteDatabase db) {
-		db.execSQL("INSERT INTO Scripts (" + ScriptsDbAdapter.COLUMN_NAME + ") VALUES ('Ex_C_Profile')");
-		InsertCommand(db, 3, 0, "LT 90");
-		InsertCommand(db, 3, 1, "FD 50");
-		InsertCommand(db, 3, 2, "RT 90");
-		InsertCommand(db, 3, 3, "FD 100");
-		InsertCommand(db, 3, 4, "RT 90");
-		InsertCommand(db, 3, 5, "FD 50");
+		db.execSQL("INSERT INTO Scripts (" + ScriptsDbAdapter.COLUMN_NAME + ") VALUES ('Ex_C180_Purlin')");
+		InsertCommand(db, 3, 0, "PT 3");
+		InsertCommand(db, 3, 1, "FD 20");
+		InsertCommand(db, 3, 2, "LT 90");
+		InsertCommand(db, 3, 3, "FD 60");
+		InsertCommand(db, 3, 4, "LT 90");
+		InsertCommand(db, 3, 5, "FD 180");
+		InsertCommand(db, 3, 6, "LT 90");
+		InsertCommand(db, 3, 7, "FD 60");
+		InsertCommand(db, 3, 8, "LT 90");
+		InsertCommand(db, 3, 9, "FD 20");
 	}
 	
 	private static void InsertTExample(SQLiteDatabase db) {
-		db.execSQL("INSERT INTO Scripts (" + ScriptsDbAdapter.COLUMN_NAME + ") VALUES ('Ex_T_Profile')");
-		InsertCommand(db, 4, 0, "FD 150");
-		InsertCommand(db, 4, 1, "RT 90");
-		InsertCommand(db, 4, 2, "FD 35");
-		InsertCommand(db, 4, 3, "PU");
-		InsertCommand(db, 4, 4, "BK 35");
-		InsertCommand(db, 4, 5, "PD");
-		InsertCommand(db, 4, 6, "BK 35");
+		db.execSQL("INSERT INTO Scripts (" + ScriptsDbAdapter.COLUMN_NAME + ") VALUES ('Ex_Z140_Purlin')");
+		InsertCommand(db, 4, 0, "DIR 45");
+		InsertCommand(db, 4, 1, "PT 3");
+		InsertCommand(db, 4, 2, "FD 20");
+		InsertCommand(db, 4, 3, "RT 45");
+		InsertCommand(db, 4, 4, "FD 50");
+		InsertCommand(db, 4, 5, "RT 90");
+		InsertCommand(db, 4, 6, "FD 140");
+		InsertCommand(db, 4, 7, "LT 90");
+		InsertCommand(db, 4, 8, "FD 54");
+		InsertCommand(db, 4, 9, "DIR 45");
+		InsertCommand(db, 4,10, "FD 20");
 	}
 	
 	private static void InsertCommand(SQLiteDatabase db, int scriptId, int order, String command) {
